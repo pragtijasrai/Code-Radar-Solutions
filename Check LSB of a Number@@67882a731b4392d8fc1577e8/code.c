@@ -2,15 +2,11 @@
 
 int main() {
     int num;
-
-    // Input the number
     scanf("%d", &num);
-
-    // Check if the least significant bit is set (1) or not (0)
-    if (num & 1) {
-        printf("set\n");  // If LSB is 1
+    if (num% & 2 != 0) {
+        printf("set\n");  
     } else {
-        printf("Not set\n");  // If LSB is 0
+        printf("Not set\n");  
     }
 
     return 0;
