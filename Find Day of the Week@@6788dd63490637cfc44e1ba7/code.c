@@ -16,7 +16,7 @@ int main(){
         printf(a==7){
             printf("Saturday");
         }else{
-            printf("Sunday")
+            printf("Sunday");
         }
     }
     return 0;
