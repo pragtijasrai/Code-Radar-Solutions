@@ -2,10 +2,10 @@
 int main(){
     int a;
     scanf("%d", &a);
-    if(a==1==31){
-        printf("January");
-    }else if(a==2==28){
-        printf("February");
+    if(a==1){
+        printf("31");
+    }else if(a==2){
+        printf("28");
     }else if(a==3==31){
         printf("March");
     }else if(a==4==30){
