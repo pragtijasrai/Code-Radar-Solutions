@@ -27,7 +27,7 @@ int main(){
     }else if(a==12==31){
         printf("December");
     }else{
-        printf("Invail");
+        printf("Invaild");
     }
     return 0;
 }
