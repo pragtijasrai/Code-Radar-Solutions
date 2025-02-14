@@ -17,7 +17,6 @@ int main(){
             printf("Saturday");
         }else{
             printf("Sunday");
-        }
     }
     return 0;
 }
