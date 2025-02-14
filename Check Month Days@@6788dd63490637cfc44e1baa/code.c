@@ -20,14 +20,14 @@ int main(){
         printf("31");
     }else if(a==9){
         printf("30");
-    }else if(a==101){
+    }else if(a==10){
         printf("31");
     }else if(a==11){
         printf("30");
     }else if(a==12){
         printf("31");
     }else{
-        printf("Invaild Month");
+        printf("Invaild month");
     }
     return 0;
 }
