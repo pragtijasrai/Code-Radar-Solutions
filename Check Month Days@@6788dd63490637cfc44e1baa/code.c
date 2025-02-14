@@ -6,26 +6,26 @@ int main(){
         printf("31");
     }else if(a==2){
         printf("28");
-    }else if(a==3==31){
-        printf("March");
-    }else if(a==4==30){
-        printf("April");
-    }else if(a==5==31){
-        printf("May");
-    }else if(a==6==30){
-        printf("June");
-    }else if(a==7==31){
-        printf("July");
-    }else if(a==8==31){
-        printf("August");
-    }else if(a==9==30){
-        printf("September");
-    }else if(a==10==31){
-        printf("October");
-    }else if(a==11==30){
-        printf("November");
-    }else if(a==12==31){
-        printf("December");
+    }else if(a==3){
+        printf("31");
+    }else if(a==4){
+        printf("30");
+    }else if(a==5){
+        printf("31");
+    }else if(a==6){
+        printf("30");
+    }else if(a==7){
+        printf("31");
+    }else if(a==8){
+        printf("31");
+    }else if(a==9){
+        printf("30");
+    }else if(a==101){
+        printf("31");
+    }else if(a==11){
+        printf("30");
+    }else if(a==12){
+        printf("31");
     }else{
         printf("Invaild");
     }
