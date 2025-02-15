@@ -8,13 +8,13 @@ int main() {
 
     // Determine the action based on the traffic light color
     if (light_color == 'R' || light_color == 'r') {
-        printf("stop\n");
+        printf("Stop\n");
     } else if (light_color == 'G' || light_color == 'g') {
-        printf("go\n");
+        printf("Go\n");
     } else if (light_color == 'Y' || light_color == 'y') {
-        printf("slow down\n");
+        printf("Slow Down\n");
     } else {
-        printf("invalid input\n");
+        printf("Invalid input\n");
     }
 
     return 0;
