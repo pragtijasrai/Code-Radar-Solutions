@@ -1,16 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    char b;
-    scanf("%c", &b);
-    if (a== 'R') {
-        printf("Stop\n");
-    } else if (a == 'G') {
-        printf("Go\n");
-    } else if (a == 'Y') {
-        printf("Slow Down\n");
+    char light_color;
+
+    // Read a single character input
+    scanf("%c", &light_color);
+
+    // Determine the action based on the traffic light color
+    if (light_color == 'R' || light_color == 'r') {
+        printf("stop\n");
+    } else if (light_color == 'G' || light_color == 'g') {
+        printf("go\n");
+    } else if (light_color == 'Y' || light_color == 'y') {
+        printf("slow down\n");
     } else {
-        printf("Invalid input\n");
+        printf("invalid input\n");
     }
 
     return 0;
