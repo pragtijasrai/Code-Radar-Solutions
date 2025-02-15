@@ -11,7 +11,7 @@ int main(){
     }else if(a==D){
         printf("Below Average");
     }else if(a==F){
-        printf("Fail");
+        printf("Friday");
     }else if(a==6){
         printf("Saturday");
     }else if(a==7){
