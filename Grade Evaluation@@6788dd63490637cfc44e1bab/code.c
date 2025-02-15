@@ -1,19 +1,19 @@
 #include<stdio.h>
 int main(){
     char a;
-    scanf("%c", a);
+    scanf("%c", &a);
     if(a==A){
-        printf("Excellent");
+        printf("Excellent\n");
     }else if(a==B){
-        printf("Good");
+        printf("Good\n");
     }else if(a==C){
-        printf("Average");
+        printf("Average\n");
     }else if(a==D){
-        printf("Below Average");
+        printf("Below Average\n");
     }else if(a==f){
         printf("Fail");
     }else{
-        printf("Invalid grade");
+        printf("Invalid grade\n");
     }
     return 0;
 }
