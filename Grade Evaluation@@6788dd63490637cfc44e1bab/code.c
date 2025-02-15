@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    int a;
+    char a;
     scanf("%d", &a);
     if(a==A){
         printf("Excellent");
@@ -10,14 +10,10 @@ int main(){
         printf("Average");
     }else if(a==D){
         printf("Below Average");
-    }else if(a==5){
-        printf("Friday");
-    }else if(a==6){
-        printf("Saturday");
-    }else if(a==7){
-        printf("Sunday");
+    }else if(a==f){
+        printf("Fail");
     }else{
-        printf("Invalid");
+        printf("Invalid grade");
     }
     return 0;
 }
