@@ -3,10 +3,8 @@
 int main() {
     char light_color;
 
-    // Read a single character input
     scanf("%c", &light_color);
 
-    // Determine the action based on the traffic light color
     if (light_color == 'R' || light_color == 'r') {
         printf("Stop\n");
     } else if (light_color == 'G' || light_color == 'g') {
@@ -19,3 +17,4 @@ int main() {
 
     return 0;
 }
+Loading Code...
