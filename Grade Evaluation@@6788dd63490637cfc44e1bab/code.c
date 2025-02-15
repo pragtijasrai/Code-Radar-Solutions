@@ -10,7 +10,7 @@ int main(){
         printf("Average");
     }else if(a==D){
         printf("Below Average");
-    }else if(a==F){
+    }else if(a==5){
         printf("Friday");
     }else if(a==6){
         printf("Saturday");
