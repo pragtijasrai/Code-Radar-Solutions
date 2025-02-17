@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    char light_color;
+    char a;
 
-    scanf("%c", &light_color);
+    scanf("%c", &a);
 
-    if (light_color == 'R' || light_color == 'r') {
+    if (a == 'R') {
         printf("Stop\n");
-    } else if (light_color == 'G' || light_color == 'g') {
+    } else if (a == 'G' ) {
         printf("Go\n");
-    } else if (light_color == 'Y' || light_color == 'y') {
+    } else if (a == 'Y' ) {
         printf("Slow Down\n");
     } else {
         printf("Invalid input\n");
