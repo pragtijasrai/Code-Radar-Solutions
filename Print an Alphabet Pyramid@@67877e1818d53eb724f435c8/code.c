@@ -5,15 +5,15 @@ int main() {
     scanf("%d", &N);
 
     for (int i = 1; i <= N; i++) {
-    
+        // Print leading spaces for pyramid alignment
         for (int s = 1; s <= N - i; s++) {
             printf(" ");
         }
 
-
+        // Print letters from 'A' up to ith character, without trailing space
         for (int j = 0; j < i; j++) {
             printf("%c", 'A' + j);
-            if (j != i - 1) {
+            if (j < i - 1) {
                 printf(" ");
             }
         }
