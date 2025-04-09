@@ -4,11 +4,11 @@ int main() {
     char str[1000];
     int length = 0;
 
-    // Read the input string
-    scanf("%s", str);
+    // Read the full line including spaces
+    fgets(str, sizeof(str), stdin);
 
-    // Iterate through the string until the null terminator
-    while (str[length] != '\0') {
+    // Count characters until newline or null terminator
+    while (str[length] != '\0' && str[length] != '\n') {
         length++;
     }
 
