@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int N, num = 1;
+    int N;
     scanf("%d", &N);
 
     for (int i = 1; i <= N; i++) {
@@ -10,12 +10,11 @@ int main() {
             printf(" ");
         }
 
-        // Print numbers in increasing order
+        // Print numbers from 1 to i
         for (int j = 1; j <= i; j++) {
-            printf("%d", num);
-            num++;
+            printf("%d", j);
             if (j < i) {
-                printf(" "); // Space between numbers
+                printf(" "); // space between numbers
             }
         }
 
