@@ -3,14 +3,12 @@
 
 int main() {
     char str[1000];
-    int freq[26] = {0}; // Frequency array for a-z
+    int freq[26] = {0}; 
     char ch;
     int i = 0;
 
-    // Read the input string (including spaces)
     fgets(str, sizeof(str), stdin);
 
-    // Count frequency of each letter
     while (str[i] != '\0') {
         ch = tolower(str[i]);
         if (ch >= 'a' && ch <= 'z') {
@@ -19,7 +17,6 @@ int main() {
         i++;
     }
 
-    // Find the most frequent character (alphabetically first in case of tie)
     int maxFreq = 0;
     char mostFreqChar = 'a';
     for (i = 0; i < 26; i++) {
