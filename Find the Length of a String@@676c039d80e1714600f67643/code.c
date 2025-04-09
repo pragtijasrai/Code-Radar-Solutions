@@ -11,5 +11,6 @@ int main() {
     }
 
     printf("%d\n", length);
+
     return 0;
 }
