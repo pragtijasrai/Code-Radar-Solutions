@@ -5,11 +5,13 @@ int main() {
     char str[1000];
     int isBinary = 1;
 
-    // Read the input string including spaces (if any)
+    // Read entire input line
     fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0';  // Remove trailing newline if present
 
-    // Check each character
+    // Remove trailing newline if it exists
+    str[strcspn(str, "\n")] = '\0';
+
+    // Check each character strictly
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] != '0' && str[i] != '1') {
             isBinary = 0;
@@ -17,8 +19,8 @@ int main() {
         }
     }
 
-    // Output the result
-    if (isBinary)
+    // Final output
+    if (isBinary && strlen(str) > 0)
         printf("Yes\n");
     else
         printf("No\n");
