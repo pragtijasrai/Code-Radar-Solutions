@@ -4,13 +4,11 @@
 
 #define MAX 1000
 
-// Trie node structure
 struct TrieNode {
     struct TrieNode *children[26];
     int isEndOfWord;
 };
 
-// Create a new Trie node
 struct TrieNode* createNode() {
     struct TrieNode node = (struct TrieNode)malloc(sizeof(struct TrieNode));
     for (int i = 0; i < 26; i++)
@@ -19,7 +17,6 @@ struct TrieNode* createNode() {
     return node;
 }
 
-// Insert all substrings into the Trie and count distinct ones
 int insertSubstrings(struct TrieNode *root, char *str) {
     int count = 0;
     int len = strlen(str);
@@ -30,7 +27,7 @@ int insertSubstrings(struct TrieNode *root, char *str) {
             int index = str[j] - 'a';
             if (current->children[index] == NULL) {
                 current->children[index] = createNode();
-                count++; // New substring found
+                count++; 
             }
             current = current->children[index];
         }
@@ -41,7 +38,7 @@ int insertSubstrings(struct TrieNode *root, char *str) {
 int main() {
     char str[MAX];
     fgets(str, MAX, stdin);
-    str[strcspn(str, "\n")] = '\0'; // Remove newline if any
+    str[strcspn(str, "\n")] = '\0'; 
 
     struct TrieNode *root = createNode();
     int result = insertSubstrings(root, str);
