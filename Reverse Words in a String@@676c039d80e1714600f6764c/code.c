@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
-void reverseWord(char *start, char *end) {
+// Function to reverse characters from index 'start' to 'end' in the string
+void reverse(char str[], int start, int end) {
     while (start < end) {
-        char temp = *start;
-        *start = *end;
-        *end = temp;
+        char temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
         start++;
         end--;
     }
@@ -15,37 +15,28 @@ void reverseWord(char *start, char *end) {
 int main() {
     char str[1000];
     
-    // Read the input string
+    // Read the whole line of input
     fgets(str, sizeof(str), stdin);
-    
-    // Remove newline character if present
-    size_t len = strlen(str);
-    if (len > 0 && str[len - 1] == '\n')
-        str[len - 1] = '\0';
 
-    char *word_start = NULL;
-    char *ptr = str;
+    int i = 0, start = 0;
 
-    while (*ptr) {
-        if (!isspace(*ptr)) {
-            if (word_start == NULL)
-                word_start = ptr;
-        } else {
-            if (word_start) {
-                reverseWord(word_start, ptr - 1);
-                word_start = NULL;
-            }
+    // Process each word in the string
+    while (str[i] != '\0') {
+        // If space or end of line is found, reverse the word
+        if (str[i] == ' ' || str[i] == '\n' || str[i] == '\0') {
+            reverse(str, start, i - 1);
+            start = i + 1;
         }
-        ptr++;
+        i++;
     }
 
-    // Reverse the last word if string doesn't end with space
-    if (word_start) {
-        reverseWord(word_start, ptr - 1);
+    // Handle the last word if the string doesn't end with a newline
+    if (str[i - 1] != '\n' && str[i - 1] != ' ') {
+        reverse(str, start, i - 1);
     }
 
-    // Output the modified string
-    printf("%s\n", str);
+    // Print the result
+    printf("%s", str);
 
     return 0;
 }
