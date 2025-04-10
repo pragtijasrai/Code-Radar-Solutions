@@ -5,8 +5,9 @@ int main() {
     char str[1000];
     int isBinary = 1;
 
-    // Read the full line (including potential spaces)
-    scanf("%s", str);  // You can also use fgets if spaces are part of input
+    // Read the input string including spaces (if any)
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0';  // Remove trailing newline if present
 
     // Check each character
     for (int i = 0; str[i] != '\0'; i++) {
