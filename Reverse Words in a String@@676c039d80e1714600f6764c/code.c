@@ -1,43 +1,40 @@
 #include <stdio.h>
 #include <string.h>
 
-void reverseWord(char *start, char *end) {
-    while (start < end) {
-        char temp = *start;
-        *start = *end;
-        *end = temp;
-        start++;
-        end--;
-    }
-}
-
 int main() {
     char str[1000];
+    int i = 0, start;
 
-    // Read input string
+    // Read full line of input
     fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0'; // Remove newline
 
-    // Remove newline character if present
-    int len = strlen(str);
-    if (str[len - 1] == '\n') {
-        str[len - 1] = '\0';
-    }
+    while (str[i] != '\0') {
+        // Skip spaces
+        while (str[i] == ' ' && str[i] != '\0') {
+            i++;
+        }
 
-    char *wordStart = NULL;
-    for (int i = 0; ; i++) {
-        if (str[i] != ' ' && str[i] != '\0') {
-            if (wordStart == NULL)
-                wordStart = &str[i];  // Mark beginning of word
-        } else {
-            if (wordStart != NULL) {
-                reverseWord(wordStart, &str[i - 1]);  // Reverse the word
-                wordStart = NULL;
-            }
-            if (str[i] == '\0')
-                break;
+        // Mark start of word
+        start = i;
+
+        // Move i to end of the current word
+        while (str[i] != ' ' && str[i] != '\0') {
+            i++;
+        }
+
+        // Now reverse the word between start and i - 1
+        int left = start, right = i - 1;
+        while (left < right) {
+            char temp = str[left];
+            str[left] = str[right];
+            str[right] = temp;
+            left++;
+            right--;
         }
     }
 
+    // Print result
     printf("%s\n", str);
     return 0;
 }
